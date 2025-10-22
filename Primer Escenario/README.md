@@ -5,7 +5,7 @@
 - Modelos disponibles en **Blender** para más diseño
 - Geometría completa y UVs desplegados
 
-## ⚠️ LO QUE FALTA URGENTE
+## ⚠️ LO QUE FALTA
 
 ### 🎨 Texturas
 - ❌ Texturas Diffuse
@@ -21,7 +21,7 @@
 - ❌ UI para manipulación
 
 ## 🔄 Trabajo Inmediato
-- Crear texturas para todos los modelos
+- Crear texturas para los faltantes
 - Programar scripts esenciales
 - Configurar materials en Unity
 - Posible agregar modelos desde Blender si se necesita
