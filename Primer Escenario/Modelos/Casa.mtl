@@ -1,0 +1,122 @@
+# Blender 4.5.3 LTS MTL File: 'Casa.blend'
+# www.blender.org
+
+newmtl LadrilloPequeñoMarrón.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/LadrilloPequeñoMarrón.jpg
+
+newmtl Madera.003
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/Madera.jpg
+
+newmtl Puerta.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/Puerta.jpg
+
+newmtl Puerta_de_Garaje.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/Garaje.png
+
+newmtl TablasDeMaderaLimpias.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/TablasDeMaderaLimpias.jpg
+
+newmtl TablasDeMaderaSuperpuestas.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/TablasDeMaderaSuperpuestas.jpg
+
+newmtl Techo.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/techos.png
+
+newmtl Ventanas.001
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+Pr 1.000000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd C:/Users/hp/Videos/texturas/Primer Escenario/Assets/Casa/ventana.png
