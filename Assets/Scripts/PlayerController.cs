@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    float upForce = 250f;
+    public float upForce = 250f;
     private Rigidbody rb;
-    float speedForce = 50f;
+    public float speedForce = 50f;
     private PlayerInput inputPlayer;
     private Vector2 input;
     private Vector3 inicio;
@@ -26,14 +26,6 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -2f)
         {
             Reset();
-        }
-        if (Keyboard.current.bKey.wasPressedThisFrame)
-        {
-            inputPlayer.SwitchCurrentActionMap("Manejar");
-        }
-        if (Keyboard.current.cKey.wasPressedThisFrame)
-        {
-            inputPlayer.SwitchCurrentActionMap("Player");
         }
     }
     private void FixedUpdate()
@@ -55,11 +47,5 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
-    public void Manejar(InputAction.CallbackContext callbackContext)
-    {
-        if (callbackContext.performed)
-        {
-            Debug.Log("manejando el auto");
-        }
-    }
+
 }
