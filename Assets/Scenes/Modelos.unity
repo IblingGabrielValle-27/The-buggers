@@ -134,15 +134,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.627329
+      value: -4.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.72
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.83186
+      value: -12.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -176,13 +176,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: tripo_convert_e87b83cd-46ac-4b43-be1e-1e969840f1fa
       objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 45.88
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 594535209}
+      addedObject: {fileID: 594535213}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 594535212}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 594535214}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 594535215}
   m_SourcePrefab: {fileID: 100100000, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
 --- !u!4 &462132298 stripped
 Transform:
@@ -396,7 +417,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 3762119402542374a8227c6c3fdc4ae3, type: 3}
   m_PrefabInstance: {fileID: 428201233}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &594535209
+--- !u!114 &594535212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594535207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3233436480fb3ec4a95c1f554676c092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upForce: 50
+  speedForce: 10
+--- !u!114 &594535213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -425,11 +460,75 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f87ee7db-e730-430d-8605-ec2a738d9971
     m_ActionName: 'player/move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 594535212}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1fa99201-6448-4ce9-adda-3d9aab1fb83b
+    m_ActionName: 'player/jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: keyboard
+  m_DefaultControlScheme: 
   m_DefaultActionMap: player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!54 &594535214
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594535207}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &594535215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594535207}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.424286, y: 1, z: 0.907654}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &1029464997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -748,7 +847,7 @@ Transform:
   m_GameObject: {fileID: 1222551739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2, y: 6.5, z: 30.3}
+  m_LocalPosition: {x: -5, y: 7.84, z: 30.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1598,7 +1697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7038436043514009785, guid: 83acfe97afe0548469e9b59a22d6e24f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.51
+      value: -8.003
       objectReference: {fileID: 0}
     - target: {fileID: 7038436043514009785, guid: 83acfe97afe0548469e9b59a22d6e24f, type: 3}
       propertyPath: m_LocalPosition.y
