@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("Game Settings")]
     [SerializeField] private int totalFragments = 6;
-    [SerializeField] private float totalTime = 120f; // 2 minutos
+    [SerializeField] private float totalTime = 120f; 
 
     [Header("UI References")]
     [SerializeField] private Text fragmentCountText;
@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     {
         if (gameEnded) return;
 
-        // Actualizar timer
         timeRemaining -= Time.deltaTime;
 
         if (timeRemaining <= 0)
@@ -56,7 +55,6 @@ public class GameManager : MonoBehaviour
         fragmentsCollected++;
         UpdateUI();
 
-        // Verificar victoria
         if (fragmentsCollected >= totalFragments)
         {
             GameOver(true);
@@ -76,7 +74,6 @@ public class GameManager : MonoBehaviour
             int seconds = Mathf.FloorToInt(timeRemaining % 60f);
             timerText.text = $"Tiempo: {minutes:00}:{seconds:00}";
 
-            // Cambiar color si queda poco tiempo
             if (timeRemaining < 30f)
             {
                 timerText.color = Color.red;
@@ -87,7 +84,7 @@ public class GameManager : MonoBehaviour
     void GameOver(bool victory)
     {
         gameEnded = true;
-        Time.timeScale = 0f; // Pausar juego
+        Time.timeScale = 0f;
 
         if (victory)
         {
@@ -96,7 +93,6 @@ public class GameManager : MonoBehaviour
                 victoryPanel.SetActive(true);
             }
 
-            // Cargar siguiente escena después de 2 segundos
             StartCoroutine(LoadNextSceneAfterDelay(2f));
         }
         else
@@ -111,7 +107,7 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadNextSceneAfterDelay(float delay)
     {
         yield return new WaitForSecondsRealtime(delay);
-        Time.timeScale = 1f; // Restaurar tiempo
+        Time.timeScale = 1f; 
         SceneManager.LoadScene(nextSceneName);
     }
 

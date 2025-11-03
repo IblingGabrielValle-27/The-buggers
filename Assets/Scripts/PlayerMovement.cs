@@ -141,14 +141,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Capturar input de movimiento
-        movimientoHorizontal = Input.GetAxis("Horizontal"); // A y D
-        movimientoVertical = Input.GetAxis("Vertical");     // W y S
+        movimientoHorizontal = Input.GetAxis("Horizontal"); 
+        movimientoVertical = Input.GetAxis("Vertical");     
 
-        // Verificar si est� en el suelo
         enSuelo = Physics.CheckSphere(checkSuelo.position, radioCheckSuelo, capaSuelo);
 
-        // Salto
         if (Input.GetKeyDown(KeyCode.Space) && enSuelo)
         {
             Saltar();
@@ -157,7 +154,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Mover el jugador
         Mover();
     }
 
@@ -166,7 +162,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movimiento = transform.right * movimientoHorizontal + transform.forward * movimientoVertical;
         movimiento = movimiento.normalized * velocidadMovimiento;
 
-        // Mantener la velocidad vertical (gravedad)
         movimiento.y = rb.linearVelocity.y;
 
         rb.linearVelocity = movimiento;
@@ -178,7 +173,6 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
     }
 
-    // Visualizar el �rea de detecci�n de suelo en el editor
     void OnDrawGizmosSelected()
     {
         if (checkSuelo != null)

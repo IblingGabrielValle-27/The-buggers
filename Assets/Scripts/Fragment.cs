@@ -24,15 +24,12 @@ public class Fragment : MonoBehaviour
 
     void Update()
     {
-        // Rotación constante
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
 
-        // Efecto de flotación (bobbing)
         bobTimer += Time.deltaTime * bobSpeed;
         float newY = startPosition.y + Mathf.Sin(bobTimer) * bobHeight;
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
 
-        // Timer de reposicionamiento
         respawnTimer -= Time.deltaTime;
         if (respawnTimer <= 0)
         {
@@ -52,7 +49,6 @@ public class Fragment : MonoBehaviour
         startPosition = newPosition;
         bobTimer = 0;
 
-        // Reiniciar timer
         respawnTimer = respawnInterval;
     }
 

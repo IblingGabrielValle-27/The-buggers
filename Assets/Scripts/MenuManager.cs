@@ -66,11 +66,9 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        // Asegurar que el menú principal esté visible
         if (mainMenuPanel != null)
             mainMenuPanel.SetActive(true);
 
-        // Configurar botones
         if (playButton != null)
             playButton.onClick.AddListener(StartGame);
 
@@ -79,7 +77,6 @@ public class MenuManager : MonoBehaviour
 
         UpdateFragmentDisplay();
 
-        // Cursor visible en menú
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1f;
@@ -87,7 +84,6 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Cargar la escena de introducción/instrucciones
         SceneManager.LoadScene("ScenePrincipal");
     }
 

@@ -29,7 +29,6 @@ public class CamaraFollower : MonoBehaviour
     {
         if (player == null) return;
 
-        // --- Movimiento del ratón ---
         float mouseX = Input.GetAxis("Mouse X") * sensibilidadX * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensibilidadY * Time.deltaTime;
 
@@ -37,17 +36,13 @@ public class CamaraFollower : MonoBehaviour
         rotX -= mouseY;
         rotX = Mathf.Clamp(rotX, minY, maxY);
 
-        // --- Rotación final de cámara ---
         Quaternion rotacion = Quaternion.Euler(rotX, rotY, 0f);
 
-        // Posicionar cámara detrás del jugador según la rotación actual
         Vector3 posicionDeseada = player.position + rotacion * offset;
         transform.position = posicionDeseada;
 
-        // La cámara mira al jugador
         transform.LookAt(player.position + Vector3.up * 1.5f);
 
-        // --- Hacer que el jugador mire hacia donde apunta la cámara ---
         Vector3 direccionJugador = new Vector3(transform.forward.x, 0f, transform.forward.z);
         player.forward = direccionJugador;
     }
